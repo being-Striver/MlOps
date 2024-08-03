@@ -1,0 +1,58 @@
+<html>
+    <body>
+        <div class="login">
+            <h1>Student exam performance indicator</h1>
+
+            <form action="{{url_for('predict_datapoint')}}" method="post">
+                <h1>
+                    <legend>Student Exam Performance indicator</legend>
+                </h1>
+                <div class="mb-3">
+                    <label class="form-label">Gender</label>
+                    <select class="form-control" name="gender" placeholder="Enter your gender" required>
+                        <option class="placeholder" selected disabled value="">Select your gender</option>
+                        <option value="male">
+                            Male
+                        </option>
+                        <option value="female">
+                            Female
+                        </option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Race/Ethnicity</label>
+                    <select class="form-control" name="race/ethnicity" placeholder="Enter your race/ethnicity" required>
+                        <option class="placeholder" selected disabled value="">Select your race/ethnicity</option>
+                        <option value="male">
+                            Group A
+                        </option>
+                        <option value="female">
+                            Group B
+                        </option>
+                        <option value="female">
+                            Group C
+                        </option>
+                        <option value="female">
+                            Group D
+                        </option>
+                        <option value="female">
+                            Group E
+                        </option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Gender</label>
+                    <select class="form-control" name="gender" placeholder="Enter your gender" required>
+                        <option class="placeholder" selected disabled value="">Select your gender</option>
+                        <option value="male">
+                            Male
+                        </option>
+                        <option value="female">
+                            Female
+                        </option>
+                    </select>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
