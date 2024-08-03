@@ -27,7 +27,7 @@ class DataTransformation:
         '''
         try:
             numerical_columns=['reading score','writing score']
-            categorical_columns=["gener", 
+            categorical_columns=["gender", 
                                  "race/ethnicity",
                                  "parental level of education",
                                 "lunch", 
@@ -44,7 +44,7 @@ class DataTransformation:
                 steps=[
                     ('imputer', SimpleImputer(strategy='most_frequent')),
                     ('one_hot_encoder', OneHotEncoder()),
-                    ('scalar', StandardScaler())
+                    # ('scalar', StandardScaler())
                 ]
             )
             logging.info("numerical columns standard scaling completed")
