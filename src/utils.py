@@ -4,6 +4,7 @@ import dill
 from src.exceptions import CustomException
 from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 from sklearn.model_selection import train_test_split
+import pickle
 
 def save_object(file_path, obj):
     try:
@@ -27,4 +28,12 @@ def evaluation_model(X_train, X_test,y_train,y_test, models):
         test_model_score=r2_score(y_test, y_test_pred)
         report[(list(models.keys())[i])]=test_model_score
     return report
+
+def load_object(file_path):
+    try:
+        with open(file_path, "rb") as file_obj:
+            return pickle.load(file_obj)
+
+    except Exception as e:
+        raise CustomException(e, sys)
     
